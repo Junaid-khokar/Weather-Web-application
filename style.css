@@ -1,0 +1,184 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: url("/wather3.avif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed ;
+}
+
+.navbar
+{
+    height: 3.5rem;
+    width: 100%;
+    background-color: rgb(55, 55, 55);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.heading{
+    margin-left: 2rem;
+    font-size: 2rem;
+    color: olive;
+}
+
+.guide
+{
+    color: white;
+}
+
+.search
+{
+    margin-right: 5rem;
+}
+
+.input
+{
+    text-align: center;
+    width: 25rem;
+    height: 1.7rem;
+    background-color:olive;
+    color:white;
+    margin-right: 2rem;
+    border-radius: 1.5rem;
+    font-size: 1.3rem;
+    padding-left: 1rem;
+    border: 2px solid white;
+}
+
+::placeholder
+{
+    color: white;
+}
+
+.btn
+{
+    
+    width: 5rem;
+    height: 2rem;
+    border: none;
+    border-radius: .5rem;
+    color: white;
+    background-color:rgb(38, 38, 38) ;
+    cursor: pointer;
+}
+
+.btn:hover
+{
+    border: 1px solid beige;
+}
+
+.container
+{
+    height: 20rem;
+    width: 50rem;
+    background-color:rgb(239, 235, 235,.2);
+    border-top-left-radius:5rem ;
+    border-bottom-right-radius: 5rem;
+    border: 2px solid beige;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.container2
+{
+    height: 15rem;
+    width: 60rem;
+    background-color:rgb(239, 235, 235,.2);
+    border-radius: 4rem;
+    border: 2px solid beige;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.box
+{
+    height: 95vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+
+.main
+{
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 2rem;
+    height: 10rem;
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+.aside
+{
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 18rem;
+    font-weight: 900;
+    width: 20rem;
+    color: olive;
+}
+
+.days
+{
+    height: 10rem;
+    width: 7rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.temp , .city
+{
+    margin: 0px;
+    font-size: 2rem;
+    color: olive;
+}
+
+.date
+{
+    font-size: 1.8rem;
+}
+
+.humidity,.rain  , .wind
+{
+    font-size: 1.2rem;
+}
+
+.temp2
+{
+    font-size: 2rem;
+    color: olive;
+}
+
+.humiDT2 ,.wph2 , .date2{
+    color: olive;
+}
+
+
+@media (max-width : 365px)
+{
+    .container
+     {
+        margin-left: 400px;
+     }
+}
