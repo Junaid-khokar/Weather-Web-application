@@ -151,6 +151,7 @@ body
 
 .temp , .city
 {
+    text-align:center;
     margin: 0px;
     font-size: 2rem;
     color: olive;
