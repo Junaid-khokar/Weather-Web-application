@@ -30,7 +30,13 @@ button.addEventListener('click',search);
 
 async function  search(){
     
-    let loc =  document.querySelector(".input").value ;
+    let loc =  await document.querySelector(".input").value ;
+    Display(loc) ;
+}
+
+
+  async function Display(loc)
+{
     const apikey = "YD6VPTFJNJZ5C9KM5ZS3KQQ2C";
     let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${loc}?key=${apikey}`;
 
@@ -42,7 +48,7 @@ async function  search(){
             humiDT.innerHTML = `${respons.currentConditions.humidity}%` ;
             wind.innerHTML = `${parseInt(respons.currentConditions.windspeed*1.6)}km/h` ;
             condition.innerHTML = respons.currentConditions.conditions ;
-            temprature.innerHTML = parseInt(5/9*(respons.currentConditions.temp-32)) ;
+            temprature.innerHTML = `${parseInt(5/9*(respons.currentConditions.temp-32))}°` ;
             city.innerHTML = respons.resolvedAddress ;
 
             for(let i=0; i<6; i++)
@@ -62,10 +68,11 @@ async function  search(){
             {
                 console.log(err);
             }); 
-        }
+        
+}
 
 fullDate.innerText = `${day} ${months[month]}` ;
 fullYear.innerText = year ;
 
-
+Display("india");
 
