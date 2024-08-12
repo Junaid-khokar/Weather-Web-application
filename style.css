@@ -1,9 +1,10 @@
+
 body
 {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-image: url("wather3.avif");
+    background-image: url("/wather3.avif");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment:fixed ;
@@ -92,6 +93,7 @@ body
     border-radius: 4rem;
     border: 2px solid beige;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-around;
 }
@@ -175,10 +177,86 @@ body
 }
 
 
-@media (max-width : 365px)
+@media (max-width : 400px)
 {
+    .navbar
+    {
+        width: 96rem;
+        height: 8rem;
+    }
+    .heading
+    {
+        margin-left: 2rem;
+        font-size: 5rem;
+    }
+    .search
+    {
+        margin-right: 10rem;
+    }
+    .input{
+        height: 4rem;
+        width: 35rem;
+        font-size: 2rem;
+    }
+    .btn
+    {
+        height: 3rem;
+        width: 8rem;
+        font-size: 1.5rem;
+    }
+    .box
+    {
+        width: 96rem;
+        height: 160rem;
+    }
     .container
-     {
-        margin-left: 400px;
-     }
+    {
+        height: 70rem;
+        width: 80rem;
+        flex-direction: column;
+    }
+    .main{
+        height: 25rem;
+        width: 40rem;
+        
+    }
+    .aside{
+        height: 35rem;
+        width: 40rem;
+    }
+    .container2
+    {
+        display: inline-block;
+        height: 50rem;
+        width: 80rem;
+        overflow:scroll;
+        white-space: nowrap;
+    }
+    .days{
+        border-radius: 5rem;
+        margin: 5rem;
+        display: inline-block;
+        height: 40rem;
+        width: 30rem;
+        text-align: center;
+    }
+    .humiDT2 ,.date2,.wph2
+    {
+        display: block;
+        margin-top: 3rem;
+        font-size: 4rem;
+    }
+    .temp2
+    { 
+        display: block;
+        font-size: 5rem;
+        margin-top: 5rem;
+    }
+    .city, .temp{
+        font-size: 4rem;
+    }
+    .date,.humidity,.wind,.rain
+    {
+        font-size: 2.5rem;
+    }
 }
