@@ -5,7 +5,6 @@ let month = date.getMonth() ;
 let year = date.getFullYear() ;
 let day = date.getDate();
 
-
 // let loc = "indore" ;
 
 // Access DOM elements here 
@@ -15,6 +14,7 @@ let wind = document.querySelector(".wph");
 let condition = document.querySelector(".condition") ;
 let city = document.querySelector(".city") ;
 let button = document.querySelector(".btn");
+let input = document.querySelector(".input");
 let fullDate = document.querySelector(".fulldate") ;
 let fullYear = document.querySelector(".fullyear") ;
 let nextTemp = document.querySelectorAll(".temp2") ;
@@ -28,9 +28,18 @@ let nextDays = document.querySelectorAll(".date2") ;
 
 button.addEventListener('click',search);
 
-async function  search(){
+ function  search(){
+
+    let loc =  input.value;
+    button.disabled=true;
     
-    let loc =  await document.querySelector(".input").value ;
+    // limit unnecessary api calls
+    setTimeout(()=>{
+
+     button.disabled=false;
+    
+    },2000);
+
     Display(loc) ;
 }
 
@@ -40,10 +49,11 @@ async function  search(){
     const apikey = "YD6VPTFJNJZ5C9KM5ZS3KQQ2C";
     let url = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${loc}?key=${apikey}`;
 
-      await fetch(url)
-       .then( async (res)=>
-        {
-            let respons = await res.json();
+      const rawRespons = await fetch(url);
+      const respons = await rawRespons.json();
+       
+        try{
+            
 
             humiDT.innerHTML = `${respons.currentConditions.humidity}%` ;
             wind.innerHTML = `${parseInt(respons.currentConditions.windspeed*1.6)}km/h` ;
@@ -63,11 +73,12 @@ async function  search(){
 
 
             console.log(respons);
-        })
-        .catch((err)=>
+        }
+        catch(err)
+
             {
                 console.log(err);
-            }); 
+            } 
         
 }
 
